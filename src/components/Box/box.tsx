@@ -1,11 +1,12 @@
 import React, { FC, forwardRef } from 'react';
-import { BoxProps } from './types';
+import { BoxProps } from './type';
+import { BoxStyled } from './styled';
 
-const Box = forwardRef<HTMLDivElement, BoxProps>(({ backgroundColor, children }, ref) => {
+const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...props }, ref) => {
   return (
-    <div ref={ref} style={{ backgroundColor }}>
+    <BoxStyled ref={ref} {...props}>
       {children}
-    </div>
+    </BoxStyled>
   );
 });
 
