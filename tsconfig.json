@@ -11,10 +11,10 @@
     "declarationDir": "types",
     "sourceMap": true,
     "outDir": "./lib",
+    "noEmit": false,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "lib"]
 }
