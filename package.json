@@ -9,7 +9,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
@@ -17,9 +17,9 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": ">= 5.1"
+    "react": "*",
+    "react-dom": "*",
+    "styled-components": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
