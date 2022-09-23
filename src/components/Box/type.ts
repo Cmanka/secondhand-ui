@@ -1,5 +1,15 @@
 import { CSSProperties, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type CssProps = Omit<CSSProperties, 'color' | 'translate'>;
+export interface CssType {
+  direction?: CSSProperties['flexDirection'];
+  wrap?: CSSProperties['flexWrap'];
+  basis?: CSSProperties['flexBasis'];
+  justify?: CSSProperties['justifyContent'];
+  align?: CSSProperties['alignItems'];
+  background: CSSProperties['background'];
+  margin?: CSSProperties['margin'];
+  padding?: CSSProperties['padding'];
+  gap?: CSSProperties['gap'];
+}
 
-export interface BoxProps extends PropsWithChildren, HTMLAttributes<HTMLDivElement>, CssProps {}
+export interface BoxProps extends PropsWithChildren, Omit<HTMLAttributes<HTMLDivElement>, 'color'>, CssType {}

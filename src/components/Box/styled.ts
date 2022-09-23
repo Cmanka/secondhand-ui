@@ -1,8 +1,14 @@
 import styled from 'styled-components';
-import { CssProps } from './type';
+import { CssType } from './type';
 
-export const BoxStyled = styled.div<CssProps>`
-  background: ${({ background }) => background};
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  color: ${({ color }) => color};
+export const BoxStyled = styled.div<CssType>`
+  display: flex;
+  flex-direction: ${({ direction }) => direction};
+  flex-wrap: ${({ wrap }) => wrap};
+  flex-basis: ${({ basis }) => basis};
+  justify-content: ${({ justify }) => justify};
+  align-items: ${({ align }) => align};
+  margin: ${({ margin }) => margin};
+  padding: ${({ padding }) => padding};
+  gap: ${({ gap }) => gap};
 `;
