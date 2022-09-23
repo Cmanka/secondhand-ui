@@ -10,8 +10,9 @@ export default {
 
 const Template: ComponentStory<typeof Box> = (args) => <Box {...args} />;
 
-export const RedBackgroundColor = Template.bind({});
-
-RedBackgroundColor.args = {
+export const RedBox = Template.bind({});
+RedBox.args = {
+  backgroundColor: 'black',
   color: 'red',
+  children: 'content',
 };

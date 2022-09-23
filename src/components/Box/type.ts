@@ -1,3 +1,5 @@
-import { HTMLAttributes, PropsWithChildren } from 'react';
+import { CSSProperties, HTMLAttributes, PropsWithChildren } from 'react';
 
-export interface BoxProps extends PropsWithChildren, HTMLAttributes<HTMLDivElement> {}
+export type CssProps = Omit<CSSProperties, 'color' | 'translate'>;
+
+export interface BoxProps extends PropsWithChildren, HTMLAttributes<HTMLDivElement>, CssProps {}

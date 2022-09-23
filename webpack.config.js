@@ -14,9 +14,16 @@ module.exports = {
   },
   externals: {
     react: 'react',
+    ['react-dom']: 'react-dom',
+    ['styled-components']: 'styled-components',
   },
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)?$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/,
+      },
       {
         test: /\.(ts|tsx)?$/,
         use: ['ts-loader'],
