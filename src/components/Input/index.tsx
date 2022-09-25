@@ -1,8 +1,14 @@
 import React, { forwardRef } from 'react';
+import { InputStyled, Wrapper } from './styled';
 import { InputProps } from './type';
 
-const Button = forwardRef<HTMLInputElement, InputProps>(({ children, ...props }, ref) => {
-  return <input ref={ref} {...props}></input>;
+const Input = forwardRef<HTMLInputElement, InputProps>(({ id, label, ...props }, ref) => {
+  return (
+    <Wrapper>
+      {label && <label htmlFor={id}>{label}</label>}
+      <InputStyled ref={ref} {...props} />
+    </Wrapper>
+  );
 });
 
-export { Button };
+export { Input };

@@ -1,15 +1,10 @@
-import { CSSProperties, HTMLAttributes, PropsWithChildren } from 'react';
+import { InputHTMLAttributes, PropsWithChildren } from 'react';
 
-// export interface CssType {
-//   direction?: CSSProperties['flexDirection'];
-//   wrap?: CSSProperties['flexWrap'];
-//   basis?: CSSProperties['flexBasis'];
-//   justify?: CSSProperties['justifyContent'];
-//   align?: CSSProperties['alignItems'];
-//   background: CSSProperties['background'];
-//   margin?: CSSProperties['margin'];
-//   padding?: CSSProperties['padding'];
-//   gap?: CSSProperties['gap'];
-// }
+export interface CssType {
+  width?: string;
+  height?: string;
+}
 
-export interface InputProps extends PropsWithChildren, Omit<HTMLAttributes<HTMLInputElement>, 'color'> {}
+export interface InputProps extends PropsWithChildren, Omit<InputHTMLAttributes<HTMLInputElement>, 'color'> {
+  label?: string;
+}
