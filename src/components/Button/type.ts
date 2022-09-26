@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes, PropsWithChildren } from 'react';
+import { CSSProperties, HTMLAttributes } from 'react';
 
 export interface CssProps {
   direction?: CSSProperties['flexDirection'];
@@ -16,7 +16,7 @@ export interface CssProps {
   fontSize?: string;
 }
 
-export interface ButtonProps extends PropsWithChildren, Omit<HTMLAttributes<HTMLButtonElement>, 'color'>, CssProps {
+export interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'color'>, CssProps {
   img?: string;
   label?: string;
   disabled?: boolean;

@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes, PropsWithChildren } from 'react';
+import { CSSProperties, HTMLAttributes } from 'react';
 
 export interface CssType {
   direction?: CSSProperties['flexDirection'];
@@ -12,4 +12,4 @@ export interface CssType {
   gap?: CSSProperties['gap'];
 }
 
-export interface BoxProps extends PropsWithChildren, Omit<HTMLAttributes<HTMLDivElement>, 'color'>, CssType {}
+export interface BoxProps extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>, CssType {}
