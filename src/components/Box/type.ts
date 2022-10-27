@@ -6,7 +6,6 @@ export interface CssType {
   basis?: CSSProperties['flexBasis'];
   justify?: CSSProperties['justifyContent'];
   align?: CSSProperties['alignItems'];
-  background: CSSProperties['background'];
   margin?: CSSProperties['margin'];
   padding?: CSSProperties['padding'];
   gap?: CSSProperties['gap'];

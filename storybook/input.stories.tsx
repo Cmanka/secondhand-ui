@@ -11,6 +11,7 @@ export default {
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const InputStory = Template.bind({});
+
 InputStory.args = {
   id: '1',
   label: 'label',

@@ -3,7 +3,7 @@ import { ListStyled } from './styled';
 import { ListProps } from './type';
 
 const List = <T extends {}>({ children, data, emptySection, ...props }: ListProps<T>) => {
-  if (data.length) {
+  if (!data.length) {
     return emptySection || null;
   }
 

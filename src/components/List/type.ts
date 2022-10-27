@@ -1,4 +1,4 @@
-import { HTMLAttributes, PropsWithChildren, ReactElement } from 'react';
+import { ReactElement } from 'react';
 
 export interface CssType {
   width?: string;
